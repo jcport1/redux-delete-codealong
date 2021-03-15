@@ -1,3 +1,4 @@
+import uuid from 'uuid';
 export default function manageTodo(state = {
   todos: [],
 }, action) {
@@ -12,7 +13,7 @@ export default function manageTodo(state = {
 
       return { todos: state.todos.concat(todo) };
 
-    case 'DELETE':
+    case 'DELETE_TODO':
 
       return {todos: state.todos.filter(todo => todo.id !== action.payload)}
 
